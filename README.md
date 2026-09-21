@@ -4,7 +4,7 @@ A simple recipe picker that pulls from a hand-built JSON file of Filipino
 dishes such as adobo, sinigang, pancit, sisig, and more and shows a random one
 with full ingredients and steps every time you click.
 
-**[Live demo →](https://filipino-recipe.vercel.app/)** *(add your deployed link here once you host it)*
+**[Live demo →](https://filipino-recipe.vercel.app/)** 
 
 ## Why I built this
 
