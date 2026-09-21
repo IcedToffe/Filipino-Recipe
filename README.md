@@ -8,7 +8,7 @@ with full ingredients and steps every time you click.
 
 ## Why I built this
 
-Most beginner "recipe" projects just call a public recipe API. I wanted to
+I made this because it was so hard for me pick a food in boarding house as a solo living. Also, most beginner "recipe" projects just call a public recipe API. I wanted to
 build my own dataset instead  a `recipes.json` file I wrote myself and
 practice `fetch`, `async/await`, and rendering lists dynamically from real
 JSON instead of hardcoding everything into the HTML.
