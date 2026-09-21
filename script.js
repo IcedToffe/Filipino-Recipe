@@ -164,7 +164,7 @@ function renderRecipe(recipe) {
 
   if (recipe.tip) {
     recipeTip.hidden = false;
-    recipeTip.textContent = `tip ${recipe.tip}`;
+    recipeTip.textContent = `Tip: ${recipe.tip}`;
   } else {
     recipeTip.hidden = true;
   }
