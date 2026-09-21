@@ -1,11 +1,3 @@
-/* ---------------------------------------------------------------
-   Design concept: a karinderya "specials board." The picked recipe
-   is a hanging menu tag (punch hole + string). Recipes you can browse
-   are ticket stubs in a scrolling strip. The spine color on both is
-   not decoration — it tells you the dish type at a glance:
-   green = ulam, blue = sabaw, plum = panghimagas.
------------------------------------------------------------------- */
-
 :root {
   --paper: #F2F1E2;
   --card: #FFFDF6;
@@ -62,7 +54,6 @@ body {
   max-width: 30rem;
 }
 
-/* ---------- Controls ---------- */
 
 main {
   width: 100%;
@@ -174,7 +165,7 @@ main {
   min-height: 1.2rem;
 }
 
-/* ---------- Ticket strip (recipe list) ---------- */
+
 
 .layout {
   margin-top: 1.5rem;
@@ -252,7 +243,7 @@ main {
   padding: 0.6rem 0.2rem;
 }
 
-/* ---------- Hero recipe card (the menu tag) ---------- */
+
 
 .recipe-card {
   --spine: var(--spine-ulam);
@@ -267,7 +258,7 @@ main {
 .recipe-card[data-category="Sabaw"] { --spine: var(--spine-sabaw); }
 .recipe-card[data-category="Panghimagas"] { --spine: var(--spine-panghimagas); }
 
-/* Hang-tag hole + string, centered at the top of the card */
+
 .tag-hole {
   position: absolute;
   top: 0.85rem;
@@ -396,7 +387,7 @@ main {
   color: var(--ink);
 }
 
-/* ---------- Footer ---------- */
+
 
 .site-footer {
   margin-top: 3rem;
@@ -405,7 +396,7 @@ main {
   text-align: center;
 }
 
-/* ---------- Responsive ---------- */
+
 
 @media (min-width: 640px) {
   .filter-row { flex-wrap: nowrap; }
