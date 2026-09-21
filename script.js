@@ -1,16 +1,3 @@
-// script.js
-//
-// New in this version:
-// - searchInput filters recipes by name as you type
-// - categoryChips filter by Ulam / Sabaw / Panghimagas
-// - favToggle shows only recipes you've starred
-// - favorites are saved with localStorage, so they persist after you
-//   close the tab (but only on your own browser/device — it's not shared)
-//
-// The general flow: recipes[] never changes. Every time a filter changes,
-// we recompute a "visible" list from recipes[] and re-render the list panel.
-// This keeps the filtering logic in one place instead of scattered around.
-
 const searchInput = document.getElementById("searchInput");
 const categoryChips = document.getElementById("categoryChips");
 const favToggle = document.getElementById("favToggle");
@@ -35,7 +22,6 @@ let selectedRecipe = null;
 let activeCategory = "all";
 let showFavoritesOnly = false;
 
-// --- Favorites (localStorage) -------------------------------------------
 
 function loadFavorites() {
   try {
@@ -102,7 +88,7 @@ function getVisibleRecipes() {
   });
 }
 
-// --- Rendering the list panel -----------------------------------------
+
 
 function renderList() {
   const visible = getVisibleRecipes();
@@ -149,7 +135,7 @@ function renderList() {
   });
 }
 
-// --- Rendering the selected recipe card ---------------------------------
+
 
 function renderRecipe(recipe) {
   selectedRecipe = recipe;
@@ -186,7 +172,7 @@ function renderRecipe(recipe) {
   favStar.textContent = isFavorite(recipe.name) ? "★" : "☆";
   favStar.setAttribute("aria-pressed", isFavorite(recipe.name));
 
-  renderList(); // refresh the list so the "selected" row and stars stay in sync
+  renderList();
 }
 
 function pickRandomRecipe() {
@@ -202,7 +188,7 @@ function pickRandomRecipe() {
   renderRecipe(choice);
 }
 
-// --- Event listeners ----------------------------------------------------
+
 
 searchInput.addEventListener("input", renderList);
 
