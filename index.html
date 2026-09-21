@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anong Lutuin Ngayon? — Random Pinoy Recipe Picker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Anong Lutuin Ngayon?</h1>
+    <p class="tagline">Dahil mas mahirap pumili ng lulutuin kaysa magluto..</p>
+  </header>
+
+  <main>
+    <div class="controls">
+      <input
+        type="text"
+        id="searchInput"
+        class="search-input"
+        placeholder="Maghanap ng ulam... (hal. adobo)"
+        aria-label="Maghanap ng recipe"
+      >
+
+      <div class="filter-row">
+        <div class="chip-group" id="categoryChips">
+          <button class="chip active" data-category="all">Lahat</button>
+          <button class="chip" data-category="Ulam">Ulam</button>
+          <button class="chip" data-category="Sabaw">Sabaw</button>
+          <button class="chip" data-category="Panghimagas">Panghimagas</button>
+        </div>
+
+        <button class="chip chip--fav" id="favToggle" aria-pressed="false">
+          ★ Paborito lang
+        </button>
+      </div>
+
+      <button class="pick-btn" id="pickBtn">🎲 Pumili ng Random</button>
+    </div>
+
+    <div id="status" class="status" aria-live="polite">Kumukuha ng recipes...</div>
+
+    <div class="layout">
+      <section class="recipe-list" id="recipeList" aria-label="Listahan ng recipes"></section>
+
+      <article class="recipe-card" id="recipeCard" hidden>
+        <span class="tag-hole" aria-hidden="true"></span>
+        <div class="card-spine"></div>
+
+        <div class="card-body">
+          <div class="card-top">
+            <div class="card-tags">
+              <span class="tag tag--category" id="tagCategory"></span>
+              <span class="tag tag--time" id="tagTime">⏱ <span id="tagTimeValue"></span></span>
+              <span class="tag tag--servings" id="tagServings">👥 <span id="tagServingsValue"></span></span>
+            </div>
+            <button class="fav-star" id="favStar" aria-label="Markahan bilang paborito">☆</button>
+          </div>
+
+          <h2 id="recipeName"></h2>
+
+          <div class="card-columns">
+            <div class="column">
+              <h3>Sangkap</h3>
+              <ul id="ingredientsList"></ul>
+            </div>
+            <div class="column">
+              <h3>Paraan</h3>
+              <ol id="stepsList"></ol>
+            </div>
+          </div>
+
+          <p class="recipe-tip" id="recipeTip" hidden></p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>I made this for my family and friends!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

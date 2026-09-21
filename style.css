@@ -1,0 +1,422 @@
+/* ---------------------------------------------------------------
+   Design concept: a karinderya "specials board." The picked recipe
+   is a hanging menu tag (punch hole + string). Recipes you can browse
+   are ticket stubs in a scrolling strip. The spine color on both is
+   not decoration — it tells you the dish type at a glance:
+   green = ulam, blue = sabaw, plum = panghimagas.
+------------------------------------------------------------------ */
+
+:root {
+  --paper: #F2F1E2;
+  --card: #FFFDF6;
+  --ink: #23301D;
+  --ink-soft: #55604C;
+  --annatto: #C1440E;
+  --turmeric: #C98A02;
+  --line: #E1DDC8;
+
+  --spine-ulam: #3F6B3E;
+  --spine-sabaw: #2C6E8E;
+  --spine-panghimagas: #7A4B8C;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "Space Mono", "Courier New", monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.75rem 1.25rem 3.5rem;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  width: 100%;
+  max-width: 40rem;
+  margin-bottom: 2rem;
+}
+
+.site-header h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 1.05;
+  margin: 0 0 0.5rem;
+  color: var(--ink);
+}
+
+.tagline {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  max-width: 30rem;
+}
+
+/* ---------- Controls ---------- */
+
+main {
+  width: 100%;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.search-input {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.75rem 1.1rem;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--ink);
+}
+
+.search-input::placeholder { color: #9A927A; }
+
+.search-input:focus-visible {
+  outline: none;
+  border-color: var(--annatto);
+  box-shadow: 0 0 0 3px rgba(193, 68, 14, 0.15);
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.chip {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: border-color 0.12s ease, color 0.12s ease, background 0.12s ease;
+}
+
+.chip:hover { border-color: var(--ink-soft); }
+
+.chip.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--card);
+}
+
+.chip--fav {
+  color: var(--turmeric);
+  border-color: var(--turmeric);
+  background: var(--card);
+}
+
+.chip--fav[aria-pressed="true"] {
+  background: var(--turmeric);
+  color: var(--card);
+}
+
+.pick-btn {
+  align-self: flex-start;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.8rem 1.5rem;
+  margin-top: 0.35rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--ink);
+  color: var(--card);
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+
+.pick-btn:hover:not(:disabled) { background: var(--annatto); }
+.pick-btn:active:not(:disabled) { transform: scale(0.97); }
+.pick-btn:disabled { opacity: 0.5; cursor: default; }
+
+.pick-btn:focus-visible {
+  outline: 3px solid var(--annatto);
+  outline-offset: 3px;
+}
+
+.status {
+  margin: 0.9rem 0 0;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  min-height: 1.2rem;
+}
+
+/* ---------- Ticket strip (recipe list) ---------- */
+
+.layout {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.recipe-list {
+  display: flex;
+  gap: 0.7rem;
+  overflow-x: auto;
+  padding: 0.2rem 0.1rem 0.9rem;
+  scrollbar-width: thin;
+}
+
+.recipe-row {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 8.5rem;
+  padding: 0.7rem 0.9rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--spine, var(--ink-soft));
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-body);
+}
+
+.recipe-row[data-category="Ulam"] { --spine: var(--spine-ulam); }
+.recipe-row[data-category="Sabaw"] { --spine: var(--spine-sabaw); }
+.recipe-row[data-category="Panghimagas"] { --spine: var(--spine-panghimagas); }
+
+.recipe-row:hover { border-color: var(--spine, var(--ink-soft)); }
+
+.recipe-row.selected {
+  box-shadow: 0 2px 0 var(--spine, var(--ink-soft));
+}
+
+.recipe-row-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+
+.recipe-row-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.25;
+}
+
+.recipe-row-category {
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+}
+
+.recipe-row-star {
+  font-size: 1rem;
+  color: var(--turmeric);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.empty-list {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  padding: 0.6rem 0.2rem;
+}
+
+/* ---------- Hero recipe card (the menu tag) ---------- */
+
+.recipe-card {
+  --spine: var(--spine-ulam);
+  position: relative;
+  background: var(--card);
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 34px -18px rgba(35, 48, 29, 0.35);
+  overflow: hidden;
+}
+
+.recipe-card[data-category="Sabaw"] { --spine: var(--spine-sabaw); }
+.recipe-card[data-category="Panghimagas"] { --spine: var(--spine-panghimagas); }
+
+/* Hang-tag hole + string, centered at the top of the card */
+.tag-hole {
+  position: absolute;
+  top: 0.85rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--paper);
+  box-shadow: inset 0 1px 3px rgba(35, 48, 29, 0.25);
+  z-index: 2;
+}
+
+.tag-hole::after {
+  content: "";
+  position: absolute;
+  top: -1.6rem;
+  left: 50%;
+  width: 1px;
+  height: 1.7rem;
+  background: var(--ink-soft);
+  opacity: 0.35;
+}
+
+.card-spine {
+  height: 5px;
+  background: var(--spine);
+}
+
+.card-body {
+  padding: 2.4rem 1.9rem 1.9rem;
+}
+
+.card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.tag--category {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  background: var(--spine);
+  color: var(--card);
+}
+
+.tag--time, .tag--servings {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.fav-star {
+  font-size: 1.6rem;
+  line-height: 1;
+  background: none;
+  border: none;
+  color: var(--turmeric);
+  cursor: pointer;
+  padding: 0;
+}
+
+.fav-star:focus-visible {
+  outline: 2px solid var(--annatto);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+#recipeName {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 4.5vw, 2.3rem);
+  margin: 0 0 1.5rem;
+  color: var(--ink);
+  max-width: 22ch;
+}
+
+.card-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+.column h3 {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--spine);
+  margin: 0 0 0.7rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1.5px dashed var(--line);
+}
+
+.column ul, .column ol {
+  margin: 0;
+  padding-left: 1.15rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.column li { margin-bottom: 0.55rem; }
+.column li:last-child { margin-bottom: 0; }
+
+.recipe-tip {
+  margin: 1.75rem 0 0;
+  padding: 0.9rem 1.1rem;
+  background: rgba(63, 107, 62, 0.08);
+  border-left: 3px solid var(--spine);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  margin-top: 3rem;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (min-width: 640px) {
+  .filter-row { flex-wrap: nowrap; }
+  .card-columns { grid-template-columns: 1fr 1.25fr; }
+}
+
+@media (min-width: 800px) {
+  main { max-width: 46rem; }
+  .site-header { max-width: 46rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pick-btn, .chip, .recipe-row { transition: none; }
+}

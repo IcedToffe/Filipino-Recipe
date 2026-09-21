@@ -1,0 +1,327 @@
+[
+  {
+    "name": "Chicken Adobo",
+    "category": "Ulam",
+    "time": "45 min",
+    "servings": 4,
+    "ingredients": [
+      "1 kg chicken, cut into pieces",
+      "1/2 cup soy sauce",
+      "1/4 cup vinegar",
+      "1 head garlic, crushed",
+      "2 bay leaves",
+      "1 tsp whole peppercorns",
+      "1 cup water",
+      "2 tbsp cooking oil"
+    ],
+    "steps": [
+      "Marinate the chicken in soy sauce and garlic for at least 20 minutes.",
+      "Heat oil in a pot and sear the chicken until lightly browned.",
+      "Add the marinade, water, bay leaves, and peppercorns. Bring to a boil.",
+      "Lower the heat and simmer for 20-25 minutes until chicken is tender.",
+      "Add the vinegar last, let it simmer for another 5 minutes without stirring too much.",
+      "Serve hot with steamed rice."
+    ],
+    "tip": "Mas masarap 'to kinabukasan — pinapahinga ang lasa magdamag sa fridge."
+  },
+  {
+    "name": "Sinigang na Baboy",
+    "category": "Sabaw",
+    "time": "1 hr",
+    "servings": 5,
+    "ingredients": [
+      "1/2 kg pork belly, sliced",
+      "1 pack sinigang mix (tamarind)",
+      "1 radish, sliced",
+      "1 eggplant, sliced",
+      "1 bunch kangkong (water spinach)",
+      "2 tomatoes, quartered",
+      "1 onion, quartered",
+      "3-4 pcs green chili",
+      "6 cups water",
+      "Fish sauce, to taste"
+    ],
+    "steps": [
+      "Boil the pork in water with onion and tomatoes until tender, about 40 minutes.",
+      "Add the radish and simmer for 5 minutes.",
+      "Stir in the sinigang mix and season with fish sauce.",
+      "Add the eggplant and green chili, simmer for 5 more minutes.",
+      "Add the kangkong last and turn off the heat once wilted.",
+      "Serve hot with rice and extra fish sauce with chili on the side."
+    ],
+    "tip": "'Wag sobrahan ang sinigang mix, dagdagan na lang ng kamias o sampalok kung gusto mo mas maasim."
+  },
+  {
+    "name": "Pancit Canton",
+    "category": "Ulam",
+    "time": "30 min",
+    "servings": 6,
+    "ingredients": [
+      "1 pack canton noodles",
+      "200g pork or chicken, sliced thin",
+      "1 cup cabbage, sliced",
+      "1 carrot, julienned",
+      "1/2 cup snow peas",
+      "3 cloves garlic, minced",
+      "1 onion, sliced",
+      "3 tbsp soy sauce",
+      "2 cups chicken broth",
+      "Cooking oil"
+    ],
+    "steps": [
+      "Sauté garlic and onion in oil until fragrant.",
+      "Add the meat and cook until browned.",
+      "Pour in the broth and soy sauce, bring to a simmer.",
+      "Add the carrots and cabbage, cook for 2-3 minutes.",
+      "Add the noodles and toss until they absorb the liquid.",
+      "Add snow peas last, toss briefly, then serve with calamansi."
+    ],
+    "tip": "Ihanda lahat ng gulay bago simulan — mabilis lang talaga ang pagluluto nito, walang oras mag-slice mid-cook."
+  },
+  {
+    "name": "Lumpiang Shanghai",
+    "category": "Ulam",
+    "time": "1 hr",
+    "servings": 8,
+    "ingredients": [
+      "500g ground pork",
+      "1 carrot, minced",
+      "1 small onion, minced",
+      "3 cloves garlic, minced",
+      "1 egg",
+      "1/4 cup spring onion, chopped",
+      "Salt and pepper, to taste",
+      "1 pack lumpia wrapper",
+      "Cooking oil, for frying"
+    ],
+    "steps": [
+      "Mix the ground pork, carrot, onion, garlic, egg, and spring onion in a bowl.",
+      "Season with salt and pepper, mix well.",
+      "Scoop a small amount onto a wrapper and roll tightly, sealing the edge with water.",
+      "Repeat until the mixture is used up.",
+      "Fry in medium heat oil until golden brown and crispy.",
+      "Drain on paper towels and serve with sweet chili sauce or banana ketchup."
+    ],
+    "tip": "Gawin sa bulk tapos i-freeze yung hindi pa niluluto — sagot 'yan pag kailangan mo bigla ng baon."
+  },
+  {
+    "name": "Bicol Express",
+    "category": "Ulam",
+    "time": "40 min",
+    "servings": 4,
+    "ingredients": [
+      "500g pork belly, sliced thin",
+      "2 cups coconut milk",
+      "5-6 pcs siling labuyo, chopped",
+      "3 cloves garlic, minced",
+      "1 onion, chopped",
+      "2 tbsp shrimp paste (bagoong)",
+      "1 tbsp cooking oil"
+    ],
+    "steps": [
+      "Sauté garlic and onion in oil until soft.",
+      "Add the pork and cook until lightly browned.",
+      "Pour in the coconut milk and simmer until pork is tender.",
+      "Add the shrimp paste and chili, stir well.",
+      "Simmer until the sauce thickens.",
+      "Serve hot with rice — this one has a real kick, so have water ready."
+    ],
+    "tip": "Kung ayaw mong sobrang anghang, tanggalin muna ang buto ng chili bago ihalo."
+  },
+  {
+    "name": "Kare-Kare",
+    "category": "Ulam",
+    "time": "1.5 hr",
+    "servings": 6,
+    "ingredients": [
+      "1 kg oxtail, cut into pieces",
+      "1/2 cup peanut butter",
+      "1/4 cup ground rice or rice flour",
+      "1 bundle string beans",
+      "1 eggplant, sliced",
+      "1 banana blossom, sliced (optional)",
+      "3 tbsp annatto (atsuete) water",
+      "1 onion, chopped",
+      "3 cloves garlic, minced"
+    ],
+    "steps": [
+      "Boil the oxtail until very tender, about an hour. Reserve the broth.",
+      "In a pot, sauté garlic and onion, then add the broth back in.",
+      "Stir in the peanut butter and annatto water until the sauce turns orange-brown.",
+      "Add the rice flour slurry to thicken the sauce.",
+      "Add the vegetables and simmer until just cooked, not mushy.",
+      "Serve with bagoong (shrimp paste) on the side and rice."
+    ],
+    "tip": "Ang tunay na bida dito ay ang bagoong sa tabi — 'wag kalimutan, mawawalan ng saysay lahat."
+  },
+  {
+    "name": "Chicken Tinola",
+    "category": "Sabaw",
+    "time": "40 min",
+    "servings": 4,
+    "ingredients": [
+      "1/2 kg chicken, cut into pieces",
+      "1 chayote (sayote), sliced",
+      "1 bundle malunggay leaves (or spinach)",
+      "1 thumb ginger, sliced",
+      "1 onion, sliced",
+      "3 cloves garlic, minced",
+      "4 cups water or rice water",
+      "Fish sauce, to taste"
+    ],
+    "steps": [
+      "Sauté garlic, onion, and ginger until fragrant.",
+      "Add the chicken and cook until slightly browned.",
+      "Pour in the water and fish sauce, bring to a boil.",
+      "Simmer until chicken is cooked through, about 20 minutes.",
+      "Add the chayote and simmer until soft.",
+      "Add the malunggay leaves last and turn off the heat once wilted."
+    ],
+    "tip": "Gamitin ang tubig-hugasan ng bigas kesa plain water, mas malalim ang lasa ng sabaw."
+  },
+  {
+    "name": "Sisig",
+    "category": "Ulam",
+    "time": "50 min",
+    "servings": 4,
+    "ingredients": [
+      "500g pork belly and pork face, boiled then grilled",
+      "1 onion, chopped finely",
+      "4-5 pcs siling labuyo, chopped",
+      "3 tbsp calamansi juice",
+      "2 tbsp soy sauce",
+      "1 tbsp mayonnaise (optional)",
+      "1 egg (optional, for topping)",
+      "Salt and pepper, to taste"
+    ],
+    "steps": [
+      "Boil the pork until tender, then grill briefly for char and smokiness.",
+      "Chop the grilled pork into small bits.",
+      "In a hot pan or sizzling plate, toss the chopped pork with onion and chili.",
+      "Season with calamansi, soy sauce, salt, and pepper.",
+      "Mix in mayonnaise if using, for creaminess.",
+      "Top with a raw or fried egg and serve immediately while sizzling."
+    ],
+    "tip": "Kailangan talaga mainit pagsilbihan — nawawala ang bongga pag lumamig na."
+  },
+  {
+    "name": "Ginataang Gulay",
+    "category": "Ulam",
+    "time": "30 min",
+    "servings": 4,
+    "ingredients": [
+      "1 cup coconut milk",
+      "200g squash, cubed",
+      "1 bundle string beans, cut",
+      "100g shrimp (optional)",
+      "2 cloves garlic, minced",
+      "1 onion, chopped",
+      "1 thumb ginger, sliced",
+      "Fish sauce, to taste"
+    ],
+    "steps": [
+      "Sauté garlic, onion, and ginger until fragrant.",
+      "Add the shrimp if using, cook briefly.",
+      "Pour in the coconut milk and bring to a gentle simmer.",
+      "Add the squash first since it takes longer to cook.",
+      "Add the string beans once squash is nearly tender.",
+      "Season with fish sauce and simmer until vegetables are cooked through."
+    ],
+    "tip": "Dahan-dahan lang sa pag-simmer, kapag pinakuluan nang malakas hihiwalay ang taba ng gata."
+  },
+  {
+    "name": "Pinakbet",
+    "category": "Ulam",
+    "time": "35 min",
+    "servings": 4,
+    "ingredients": [
+      "150g pork belly, sliced thin",
+      "1 small squash, cubed",
+      "1 eggplant, sliced",
+      "1 bundle string beans, cut",
+      "2-3 pcs okra",
+      "2 tbsp shrimp paste (bagoong)",
+      "2 tomatoes, chopped",
+      "1 onion, chopped",
+      "3 cloves garlic, minced"
+    ],
+    "steps": [
+      "Sauté garlic, onion, and tomatoes until soft.",
+      "Add the pork and cook until lightly browned.",
+      "Stir in the shrimp paste and a splash of water.",
+      "Add the squash first, cover and simmer until half-cooked.",
+      "Add the rest of the vegetables and simmer until just tender.",
+      "Serve immediately — the vegetables should still have a bit of bite."
+    ],
+    "tip": "Mas masarap pag may bagoong isda pa ring buo, hindi lang yung sabaw nito."
+  },
+  {
+    "name": "Arroz Caldo",
+    "category": "Sabaw",
+    "time": "40 min",
+    "servings": 5,
+    "ingredients": [
+      "1 cup glutinous rice (malagkit), rinsed",
+      "1/2 kg chicken, cut into small pieces",
+      "1 thumb ginger, julienned",
+      "3 cloves garlic, minced",
+      "1 onion, chopped",
+      "6 cups water or chicken broth",
+      "Fish sauce, to taste",
+      "Toppings: fried garlic, spring onion, calamansi, boiled egg"
+    ],
+    "steps": [
+      "Sauté garlic, onion, and ginger until fragrant.",
+      "Add the chicken and cook until lightly browned.",
+      "Add the rice and stir for a minute to coat it in the aromatics.",
+      "Pour in the water or broth and bring to a boil.",
+      "Lower heat and simmer, stirring occasionally, until rice is soft and porridge-like.",
+      "Season with fish sauce and serve topped with fried garlic, spring onion, and calamansi."
+    ],
+    "tip": "Perfect 'to pag may sipon sa bahay — dagdagan ng luya, dagdag comfort din."
+  },
+  {
+    "name": "Turon",
+    "category": "Panghimagas",
+    "time": "25 min",
+    "servings": 8,
+    "ingredients": [
+      "4 pcs saba banana, sliced lengthwise",
+      "1/2 cup jackfruit strips (langka), optional",
+      "8 pcs lumpia wrapper",
+      "1/2 cup brown sugar",
+      "Cooking oil, for frying"
+    ],
+    "steps": [
+      "Roll the banana (and jackfruit if using) in brown sugar until coated.",
+      "Wrap in a lumpia wrapper, sealing the edges with a bit of water.",
+      "Heat oil in a pan over medium heat.",
+      "Fry the rolls until golden brown and the sugar caramelizes on the outside.",
+      "Drain on paper towels before serving to avoid a sugar-burnt tongue.",
+      "Best eaten warm, on its own or with ice cream."
+    ],
+    "tip": "Medium heat lang, mabilis masunog ang asukal bago pa maluto ang loob kung malakas ang apoy."
+  },
+  {
+    "name": "Biko",
+    "category": "Panghimagas",
+    "time": "45 min",
+    "servings": 8,
+    "ingredients": [
+      "2 cups glutinous rice (malagkit)",
+      "2 cups coconut milk",
+      "1 cup brown sugar",
+      "1/2 cup thick coconut cream (latik base)",
+      "A pinch of salt"
+    ],
+    "steps": [
+      "Steam or boil the glutinous rice until just cooked.",
+      "In a pan, combine coconut milk, brown sugar, and a pinch of salt. Simmer until it thickens slightly.",
+      "Fold in the cooked rice and mix well over low heat until the mixture is sticky and evenly coated.",
+      "Transfer to a tray and press down evenly.",
+      "Separately, cook the coconut cream until it turns into golden latik curds.",
+      "Top the biko with the latik before serving, sliced into squares."
+    ],
+    "tip": "Ang latik ang sikreto dito — huwag padaanin lang, ubusin talaga hanggang gumolden."
+  }
+]
