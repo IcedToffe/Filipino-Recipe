@@ -1,7 +1,7 @@
 # Anong Lutuin Ngayon?
 
 A simple recipe picker that pulls from a hand-built JSON file of Filipino
-dishes such as adobo, sinigang, pancit, sisig, and more — and shows a random one
+dishes such as adobo, sinigang, pancit, sisig, and more and shows a random one
 with full ingredients and steps every time you click.
 
 **[Live demo →](#)** *(add your deployed link here once you host it)*
@@ -9,7 +9,7 @@ with full ingredients and steps every time you click.
 ## Why I built this
 
 Most beginner "recipe" projects just call a public recipe API. I wanted to
-build my own dataset instead — a `recipes.json` file I wrote myself — and
+build my own dataset instead  a `recipes.json` file I wrote myself and
 practice `fetch`, `async/await`, and rendering lists dynamically from real
 JSON instead of hardcoding everything into the HTML.
 
